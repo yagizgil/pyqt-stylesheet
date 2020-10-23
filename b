@@ -1,0 +1,6 @@
+sad = QLineEdit()
+sad.setText("Line Editj")
+sad.setObjectName("sad")
+sad.setFixedSize()
+sad.setCursor(QCursor(Qt.ArrowCursor))
+sad.setAlignment(Qt.AlignCenter)

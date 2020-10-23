@@ -1,0 +1,19 @@
+#save {
+   border-radius: 32;
+}
+#save:hover {
+   border-width: 1px;
+   border-style: solid;
+   border-color: #1e90ff;
+}
+#save::pressed {
+   background: #1e90ff;
+}
+#object_header {
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+QDockWidget::title {
+  border: 1px solid #747d8c;
+}
