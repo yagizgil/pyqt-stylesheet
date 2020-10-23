@@ -1,11 +1,36 @@
-QPushButton {
-   border-radius: 45px;
+QRadioButton {
+   color: red;
+   outline: 0;
 }
-QPushButton:hover {
-   border-width: 1px;
-   border-style: solid;
-   border-color: blue;
+QRadioButton:hover {
+   outline: 0;
 }
-QPushButton::pressed {
-   background: lightblue;
+QRadioButton::checked {
+   outline: 0;
+}
+QRadioButton::unchecked {
+   outline: 0;
+}
+QRadioButton::indicator {
+   outline: 0;
+}
+QRadioButton::indicator:checked {
+   color: red;
+   outline: 0;
+   width: 4px;
+}
+QRadioButton::indicator:checked:hover {
+   outline: 0;
+}
+QRadioButton::indicator:checked:pressed {
+   outline: ;
+}
+QRadioButton::indicator:unchecked {
+   outline: ;
+}
+QRadioButton::indicator:unchecked:hover {
+   outline: ;
+}
+QRadioButton::indicator:unchecked:pressed {
+   outline: ;
 }
