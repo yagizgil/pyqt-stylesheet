@@ -1,15 +1,11 @@
-QLineEdit {
-   color: #2C3A47;
-   height: 32px;
-   font-size: 15px;
-   background: transparent;
-   border-width: 1px;
-   border-style: solid;
-   border-color: transparent;
+QPushButton {
+   border-radius: 45px;
 }
-QLineEdit:hover {
-   color: #2c2c54;
+QPushButton:hover {
    border-width: 1px;
    border-style: solid;
-   border-color: #182C61;
+   border-color: blue;
+}
+QPushButton::pressed {
+   background: lightblue;
 }

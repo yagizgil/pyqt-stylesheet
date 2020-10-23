@@ -209,6 +209,23 @@ class NewObject(QDialog):
         menu.setObjectName("obje")
         scrollbar.setObjectName("obje")
 
+        label.setCursor(QCursor(Qt.PointingHandCursor))
+        pushbutton.setCursor(QCursor(Qt.PointingHandCursor))
+        lineedit.setCursor(QCursor(Qt.PointingHandCursor))
+        textedit.setCursor(QCursor(Qt.PointingHandCursor))
+        radiobutton.setCursor(QCursor(Qt.PointingHandCursor))
+        checkbox.setCursor(QCursor(Qt.PointingHandCursor))
+        combobox.setCursor(QCursor(Qt.PointingHandCursor))
+        spinbox.setCursor(QCursor(Qt.PointingHandCursor))
+        slider.setCursor(QCursor(Qt.PointingHandCursor))
+        listwid.setCursor(QCursor(Qt.PointingHandCursor))
+        progressbar.setCursor(QCursor(Qt.PointingHandCursor))
+        groupbox.setCursor(QCursor(Qt.PointingHandCursor))
+        tabwidget.setCursor(QCursor(Qt.PointingHandCursor))
+        dockwidget.setCursor(QCursor(Qt.PointingHandCursor))
+        menu.setCursor(QCursor(Qt.PointingHandCursor))
+        scrollbar.setCursor(QCursor(Qt.PointingHandCursor))
+
 
         label.clicked.connect(self.set_lbl)
         pushbutton.clicked.connect(self.set_pushbtn)
