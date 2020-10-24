@@ -462,7 +462,7 @@ class ObjectScreen(QMainWindow):
         v3 = QVBoxLayout()
 
         l = QScrollBar(Qt.Vertical)
-        
+
 
 
         l2 = QScrollBar(Qt.Horizontal)
