@@ -29,8 +29,22 @@ class About(QDialog):
         form.addRow(QLabel("Contact us for your suggestions for shortcomings in the application and for errors you encounter."))
         form.addRow(QLabel("Do not forget to write your e-mail address to get a reply."))
 
+        frm = QFrame()
+        frm.setFrameShape(QFrame.HLine)
+        form.addRow(frm)
+
+
+        self.mail = QLineEdit()
+        form.addRow(QLabel("Mail: "), self.mail)
+
+        self.passwd = QLineEdit()
+        self.passwd.setEchoMode(QLineEdit.Password)
+        form.addRow(QLabel("Parola / Password: "), self.passwd)
+
         self.text = QTextEdit()
         form.addRow(self.text)
+
+        form.addRow(QLabel("To: ali.baydur1991@gmail.com"))
 
         hbox = QHBoxLayout()
 
@@ -44,16 +58,6 @@ class About(QDialog):
 
         form.addRow(hbox)
 
-        bynogame = QPushButton()
-        bynogame.setIcon(QIcon("image/bynogame.png"))
-        bynogame.setIconSize(QSize(200,85))
-        bynogame.setCursor(QCursor(Qt.PointingHandCursor))
-        bynogame.setStyleSheet("QPushButton { border: none;} QPushButton:hover { border: 1px solid #2ecc71;} QPushButton::pressed { background: #2ecc71;}")
-        bynogame.clicked.connect(self.bynogame)
-
-        form.addRow(QLabel("Donation link/Bağış Linki:"))
-        form.addRow(bynogame)
-
         self.setLayout(form)
 
 
@@ -61,12 +65,11 @@ class About(QDialog):
         if self.text.toPlainText() == "":
             msg = QMessageBox.warning(self, "Error/Hata", "Textedit is blank/Textedit boş!")
         else:
-            mail = smtplib.SMTP("smtp.gmail.com",587)
-            mail.ehlo()
-            mail.starttls()
-            mail.login("hackerroot587@gmail.com","Ayyildiz2002")
-            mail.sendmail("hackerroot587@gmail.com","ali.baydur1991@gmail.com",self.text.toPlainText())
-
-
-    def bynogame(self):
-        webbrowser.open("https://www.bynogame.com/destekle/c4d3r")
+            try:
+                mail = smtplib.SMTP("smtp.gmail.com",587)
+                mail.ehlo()
+                mail.starttls()
+                mail.login(self.mail.text(), self.passwd.text())
+                mail.sendmail(sel.mail.text(),"ali.baydur1991@gmail.com",self.text.toPlainText())
+            except Exception as ex:
+                msg = QMessageBox.warning(self, "Error/Hata", str(ex))
