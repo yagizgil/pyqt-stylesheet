@@ -22,10 +22,4 @@ You can design these objects and more like "hover, pressed, marked, indicator, c
 
 
 
-There is a lot to add.
-A file is encrypted, I would appreciate it if you don't decrypt it. 
-I have personal information for communication.
 
-Eklenecek çok şey var. 
-Bir dosya şifrelenmiştir, şifresini çözmezseniz sevinirim. 
-İletişim için kişisel bilgilerim var.
