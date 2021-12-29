@@ -1,4 +1,4 @@
-A css design tool for PyQt. / PyQt için bir css tasarım aracı.
+A css design tool for PyQt.
 
 PYQT DESIGN TOOL FOR PYTHON DEVELOPERS
 Hello friends. I designed a design tool for PyQt developers. As is known, the PyQt class supports CSS. This software I designed will help those using CSS in PyQt.
